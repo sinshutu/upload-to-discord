@@ -1,0 +1,19 @@
+on: push
+name: Main workflow
+jobs:
+  github-action:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: github-action
+      uses: nocturlab/upload-to-discord@master
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      with:
+        args: README.md
+    - name: local action
+      uses: ./
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+      with:
+        args: README.md
