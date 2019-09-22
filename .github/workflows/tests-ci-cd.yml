@@ -17,12 +17,12 @@ jobs:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
         args: README.md
-    - name: Send all files
+    - name: Send all files with extension
       uses: nocturlab/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
-        args: ./*
+        args: ./*.*
     - name: Send many files
       uses: nocturlab/upload-to-discord@master
       env:
