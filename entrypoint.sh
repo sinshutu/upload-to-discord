@@ -12,7 +12,7 @@ if [[ -z "$1" ]]; then
   exit 1
 fi
 
-for f in $1; do
+for f in $@; do
   curl -H 'Content-Type: multipart/form-data' \
   -X POST \
   -F "file=@$f" $DISCORD_WEBHOOK
