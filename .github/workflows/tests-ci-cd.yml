@@ -18,13 +18,13 @@ jobs:
       with:
         args: README.md
     - name: Send all files with extension
-      uses: nocturlab/upload-to-discord@master
+      uses: sinshutu/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
         args: ./*.*
     - name: Send many files
-      uses: nocturlab/upload-to-discord@master
+      uses: sinshutu/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:

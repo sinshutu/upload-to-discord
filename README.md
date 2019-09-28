@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Send file README.md to discord channel
-      uses: nocturlab/upload-to-discord@master
+      uses: sinshutu/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
@@ -23,7 +23,7 @@ You must pass at least one argument, the path to the file you want to attach. Yo
 
 ```yaml
     - name: Send file README.md to discord channel
-      uses: nocturlab/upload-to-discord@master
+      uses: sinshutu/upload-to-discord@master
       env:
         DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       with:
